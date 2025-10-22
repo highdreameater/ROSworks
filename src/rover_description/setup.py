@@ -13,7 +13,6 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
 
-        # This is the important part!
         # Install all .launch.py files from the 'launch' directory
         (os.path.join('share', package_name, 'launch'), glob('launch/*.launch.py')),
 
@@ -28,14 +27,14 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='your_name',
-    maintainer_email='your_email@todo.com',
+    maintainer='Vitthal',
+    maintainer_email='highdreameater@gmail.com',
     description='Rover description and control package',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            # If you create any Python nodes, add them here
+            #for python nodes
         ],
     },
 )

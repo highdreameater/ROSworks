@@ -12,7 +12,6 @@ def generate_launch_description():
     pkg_path = get_package_share_directory('rover_description')
     
     # Define the path to the URDF file
-    # We use xacro to process the file (even if it's not a .xacro, it's good practice)
     urdf_file_path = os.path.join(pkg_path, 'urdf', 'rover.urdf')
     
     # Process the URDF file
@@ -51,7 +50,6 @@ def generate_launch_description():
         arguments=['-d', rviz_config_path] # Load our custom config file
     )
 
-    # Create the launch description and add the nodes
     return LaunchDescription([
         robot_state_publisher_node,
         joint_state_publisher_gui_node,
